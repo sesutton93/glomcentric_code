@@ -3,8 +3,12 @@ import numpy as np
 from collections import defaultdict
 import matplotlib.path as mplp
 from scipy.io import loadmat
+import os
 from os.path import join as pjoin
+import sys
 
+curdir = os.path.abspath(os.path.curdir)
+sys.path.append(os.path.join(curdir,'FUImaging'))
 from regnmf import ImageAnalysisComponents as ia
 
 

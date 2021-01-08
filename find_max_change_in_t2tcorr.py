@@ -2,7 +2,10 @@ from configobj import ConfigObj
 import os
 import numpy as np
 import sys
-import regnmf.ImageAnalysisComponents as ia
+curdir = os.path.abspath(os.path.curdir)
+sys.path.append(curdir)
+sys.path.append(os.path.join(curdir,'FUImaging'))
+from regnmf import ImageAnalysisComponents as ia
 from scipy.spatial.distance import pdist
 
 basepath = os.path.abspath(sys.argv[1])

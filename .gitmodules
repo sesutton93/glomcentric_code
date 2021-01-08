@@ -1,0 +1,6 @@
+[submodule "FUImaging"]
+	path = FUImaging
+	url = https://github.com/sesutton93/FUImaging.git
+[submodule "BootstrapPrediction"]
+	path = BootstrapPrediction
+	url = https://github.com/sesutton93/BootstrapPrediction.git
