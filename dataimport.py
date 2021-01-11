@@ -45,7 +45,7 @@ class csvInterface(object):
         self.location = location
 
     def make_tabledict(self, desc, table):
-        print desc, table
+        print(desc, table)
         fname = self.location + table + '.csv'
         fh = open(fname)
         headers = fh.readline().strip('\r\n').split(',')
@@ -62,7 +62,7 @@ class csvInterface(object):
             if not 'error' in identify[mol_ix]:
                 tabledict[int(mol)] = data[mol_ix]
                 if data[mol_ix] == -999:
-                    print int(mol), data[mol_ix]
+                    print(int(mol), data[mol_ix])
         return tabledict
 
 """
