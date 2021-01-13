@@ -23,7 +23,7 @@ class AssignMode(object):
         self.bg = data_dict['bg']
         self.mf = data_dict['mf']
         self.alias = data_dict['alias']
-	self.roi = data_dict['roi'] if 'roi' in data_dict else None
+        self.roi = data_dict['roi'] if 'roi' in data_dict else None
         self.mode_map = np.argmax(self.mf.base.shaped2D(), 0)
 
         # draw intial
