@@ -188,14 +188,14 @@ class LoadRoi():
         num_rois = rois_vert[self.keys[0]].shape[1]
 
         temp_grid = np.indices(shape)
-        grid = np.array(zip(temp_grid[1].flatten(), temp_grid[0].flatten()))
+        grid = np.array(list(zip(temp_grid[1].flatten(), temp_grid[0].flatten())))
 
         rois = []
         for roi_ind in range(num_rois):
             x_edge = rois_vert[self.keys[0]][:, roi_ind] / (self.uwidth / shape[0])
             y_edge = rois_vert[self.keys[1]][:, roi_ind] / (self.uwidth / shape[0])
             num_edges = np.sum(x_edge != 0)
-            verts = np.array(zip(x_edge, y_edge))[:num_edges]
+            verts = np.array(list(zip(x_edge, y_edge)))[:num_edges]
             path = mplp.Path(verts)
             points_in_poly = path.contains_points(grid)
             rois.append(points_in_poly)
